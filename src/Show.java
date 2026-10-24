@@ -33,7 +33,7 @@ public class Show {
             System.out.println("Актеры одинаковы, укажите других актеров");
         } else if (((actor1.getName()).equals(actor2.getName())) ||
                 ((actor1.getSurname()).equals(actor2.getSurname())) ||
-                        ((actor1.getHeight()) == (actor2.getHeight()))) {
+                ((actor1.getHeight()) == (actor2.getHeight()))) {
             System.out.println("Актеры одинаковы, укажите других актеров");
         } else {
             actors.remove(actor1);

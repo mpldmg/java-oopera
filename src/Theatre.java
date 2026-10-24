@@ -7,12 +7,12 @@ public class Theatre {
         Actor actor3 = new Actor("Ирина", "Волкова", Gender.FEMALE, 175);
         Director director1 = new Director("Дарья", "Гусева", Gender.FEMALE, 48);
         Director director2 = new Director("Виталий", "Борисов", Gender.MALE, 98);
-        Person musicPerson = new Person("Евгений","Пригожин", Gender.MALE);
-        Person choreographerPerson = new Person("Елена","Головач", Gender.FEMALE);
+        Person musicPerson = new Person("Евгений", "Пригожин", Gender.MALE);
+        Person choreographerPerson = new Person("Елена", "Головач", Gender.FEMALE);
 
         Show defaultShow = new Show("Час разрушения", 100, director1);
         Ballet ballet = new Ballet("Чёрный лебедь", 90, director1, musicPerson, "Жанр: драмма. Действующие лица: лебедь белый, лебедь черный", choreographerPerson);
-        Opera opera = new Opera("Гибель богов", 150, director2, musicPerson,"Действующие лица: Зигфрид, Брунгильда, Хеген, Гунтер, " +
+        Opera opera = new Opera("Гибель богов", 150, director2, musicPerson, "Действующие лица: Зигфрид, Брунгильда, Хеген, Гунтер, " +
                 "Гудруна, Вальтраута, Три норны, Дверинги Рейна", 80);
 
         //      "Попробуйте заменить в другом спектакле несуществующего актёра"
@@ -28,7 +28,8 @@ public class Theatre {
         opera.changeActor(actor1, actor3);
         opera.getLibrettoText();
         System.out.println("Представление закончилось");
-        opera.getDirector().setNumberOfShows(opera.getDirector().getNumberOfShows()+1);
+        opera.getDirector().setNumberOfShows(opera.getDirector().getNumberOfShows() + 1); // после представления счетчик numberOfShows должен увеличиться на 1
+
         System.out.println();
         System.out.println("Добро пожаловать на балет!");
         ballet.showDirector();
@@ -38,7 +39,8 @@ public class Theatre {
         ballet.changeActor(actor2, actor1);
         ballet.getLibrettoText();
         System.out.println("Представление закончилось");
-        ballet.getDirector().setNumberOfShows(ballet.getDirector().getNumberOfShows()+1);
+        ballet.getDirector().setNumberOfShows(ballet.getDirector().getNumberOfShows() + 1);
+
         System.out.println();
         System.out.println("Добро пожаловать на шоу!");
         defaultShow.showDirector();
@@ -47,6 +49,6 @@ public class Theatre {
         defaultShow.showActors();
         defaultShow.changeActor(actor1, actor2);
         System.out.println("Представление закончилось");
-        defaultShow.getDirector().setNumberOfShows(defaultShow.getDirector().getNumberOfShows()+1);
+        defaultShow.getDirector().setNumberOfShows(defaultShow.getDirector().getNumberOfShows() + 1);
     }
 }

@@ -24,7 +24,7 @@ public class Actor extends Person {
 
     @Override
     public int hashCode() {
-        int superHash = 123*654*196;
+        int superHash = 123 * 654 * 196;
         if (getSurname() != null && getName() != null && getHeight() != 0) {
             superHash = superHash + getSurname().hashCode() + getName().hashCode() + getHeight();
         }
@@ -34,11 +34,11 @@ public class Actor extends Person {
     @Override
     public String toString() {
         String fullName = "";
-        if(getGender().equals(Gender.MALE)) {
+        if (getGender().equals(Gender.MALE)) {
             fullName += "Актер ";
         } else {
             fullName += "Актриса ";
         }
-        return fullName + getName() + " " + getSurname() + " | Рост ("+ getHeight() + ") см.";
+        return fullName + getName() + " " + getSurname() + " | Рост (" + getHeight() + ") см.";
     }
 }
